@@ -1,7 +1,7 @@
 "use strict";
 const config = require('../config');
 const mongoose = require('mongoose');
-mongoose.connect(config.mongodb);
+mongoose.connect(config.mongodb, {useNewUrlParser: true});
 mongoose.Promise = global.Promise;
 
 const db = mongoose.connection;

@@ -1,8 +1,8 @@
 "use strict";
 
 module.exports = {
-    mongodb: "mongodb://127.0.0.1:27017/dn_abc?authSource=admin",
-
+    port: '3000',
+    mongodb: "mongodb://127.0.0.1/donut_english?authSource=admin",
     mysql: {
         host: '127.0.0.1',
         port: '3306',

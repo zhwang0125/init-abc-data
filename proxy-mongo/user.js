@@ -5,8 +5,8 @@ const userSchema = require('../models-mongo/user');
  * @param ops
  * @param page
  * @param limit
- * @return Array
- */
+* @return Array
+*/
 exports.findList = function(ops, page, limit){
     return userSchema.find(ops).sort("createdAt").skip((page - 1) * limit).limit(limit).exec();
 };

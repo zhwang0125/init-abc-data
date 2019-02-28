@@ -1,8 +1,9 @@
 'use strict';
 const mongoose = require('mongoose');
+const Schema = mongoose.Schema;
 
-let userSchema = new mongoose.Schema({
-    userId: String,
+const userSchema = new Schema({
+    userid: String,
     username: String,
     mobilePhoneNumber: String,
     Reject: Number,
@@ -10,4 +11,4 @@ let userSchema = new mongoose.Schema({
     createdAt: Date
 });
 
-mongoose.model('user', userSchema);
+exports = module.exports = mongoose.model('User', userSchema, '_User');
