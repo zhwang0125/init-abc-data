@@ -1,9 +1,13 @@
-// let mongoose = require('mongoose');
-//
-//
-// var taskSchema = new mongoose.Schema({
-//     userId: String,
-//
-// });
+'use strict';
+const mongoose = require('mongoose');
 
-console.log('http%3A//static.donut.cn/donut/english/zip/2787abd'.length);
+let userSchema = new mongoose.Schema({
+    userId: String,
+    username: String,
+    mobilePhoneNumber: String,
+    Reject: Number,
+
+    createdAt: Date
+});
+
+mongoose.model('user', userSchema);
