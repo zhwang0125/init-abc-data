@@ -7,10 +7,8 @@
  */
 const Sequelize = require("sequelize");
 const baseSequelize = require('./');
-const TABLE_NAME = 'dne_donut_currency';
 
-let Model = baseSequelize.define(TABLE_NAME, {
-    id: Sequelize.INTEGER,
+let Model = baseSequelize.baseDefine('dne_donut_currency', {
     user_id: Sequelize.INTEGER,                     // 用户ID,
     donut_count: Sequelize.INTEGER,                 // 纳币数
     grand_total_donut_count: Sequelize.INTEGER,     // 累计获得纳币数

@@ -27,4 +27,17 @@ sequelize.authenticate().then(function() {
     throw err;
 });
 
+/**
+ * base define 方法
+ * @param tableName
+ * @param obj
+ * @returns {Model}
+ */
+sequelize.baseDefine = function(tableName, obj){
+    return sequelize.define(tableName, obj, {
+        freezeTableName: true,      // 取消表名复数
+        timestamps: false           // 取消createdAt和updatedAt
+    });
+};
+
 exports = module.exports = sequelize;

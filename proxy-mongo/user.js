@@ -7,7 +7,7 @@ const userSchema = require('../models-mongo/user');
  * @param limit
 * @return Array
 */
-exports.findList = function(ops, page, limit){
+exports.findList = async function(ops, page, limit){
     return userSchema.find(ops).sort("createdAt").skip((page - 1) * limit).limit(limit).exec();
 };
 
@@ -16,6 +16,6 @@ exports.findList = function(ops, page, limit){
  * @param ops
  * @returns Number
  */
-exports.findCount = function(ops){
+exports.findCount = async function(ops){
     return userSchema.count(ops).exec();
 };
